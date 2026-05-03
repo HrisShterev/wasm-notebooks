@@ -1,0 +1,1 @@
+[{"kernel": "xc23", "env_name": "xeus-cpp-wasm-host"}, {"kernel": "xc11", "env_name": "xeus-cpp-wasm-host"}, {"kernel": "xcpp20", "env_name": "xeus-cpp-wasm-host"}, {"kernel": "xc17", "env_name": "xeus-cpp-wasm-host"}, {"kernel": "xcpp17", "env_name": "xeus-cpp-wasm-host"}, {"kernel": "xcpp23", "env_name": "xeus-cpp-wasm-host"}]
