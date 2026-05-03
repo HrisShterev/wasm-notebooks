@@ -2,7 +2,7 @@ name: Deploy JupyterLite
 
 on:
   push:
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,16 +18,14 @@ jobs:
             jupyter_server
             jupyterlite-xeus
             -c conda-forge
-
-      - name: Set PREFIX
-        run: echo "PREFIX=$MAMBA_ROOT_PREFIX/envs/xeus-lite-host" >> $GITHUB_ENV
+          init-shell: bash
 
       - name: Build JupyterLite
+        shell: bash -el {0}
         run: |
           jupyter lite build \
-            --XeusAddon.prefix=$PREFIX \
             --contents "images" \
-            --contents "notebooks" \
+            --contents "*.ipynb" \
             --output-dir docs
 
       - name: Deploy to GitHub Pages
