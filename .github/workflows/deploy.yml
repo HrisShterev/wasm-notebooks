@@ -25,7 +25,7 @@ jobs:
         run: |
           jupyter lite build \
             --contents "images" \
-            --contents "*.ipynb" \
+            --contents "notebooks" \
             --output-dir docs
 
       - name: Deploy to GitHub Pages
