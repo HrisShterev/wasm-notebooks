@@ -23,11 +23,12 @@ jobs:
       - name: Build JupyterLite
         shell: bash -el {0}
         run: |
-          jupyter lite build \
-            --contents "images" \
-            --contents "notebooks" \
-            --output-dir docs
-
+           jupyter lite build \
+             --XeusAddon.environment_file=environment.yml \
+             --contents images \
+             --contents notebooks \
+             --output-dir docs
+    
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

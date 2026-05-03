@@ -1,0 +1,6 @@
+name: xeus-cpp-wasm-host
+channels:
+  - https://prefix.dev/emscripten-forge-4x
+  - https://prefix.dev/conda-forge
+dependencies:
+  - xeus-cpp
